@@ -83,9 +83,9 @@ and proves to be universally applicable across different LLMs.
 
 <figure>
     <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
-    <center>
+    <p align="center">
     <figcaption>Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
-    </center>
+    </p>
 </figure>
 
 
