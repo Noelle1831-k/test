@@ -80,13 +80,12 @@ and proves to be universally applicable across different LLMs.
 ## Comparison of Intact and Corrupted Watermarked Code
 
 ## Evaluation Results of Multi-bit Watermarking
-
-<figure>
-    <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
-    <p align="center">
-    <figcaption>Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
-    </p>
-</figure>
+<div align="center">
+     <figure>
+         <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
+         <figcaption>                   Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
+     </figure>
+</div>     
 
 
 ## Transformation Rules for ACW
