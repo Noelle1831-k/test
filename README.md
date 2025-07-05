@@ -1,5 +1,5 @@
 <p align="center">
-     <a href="https://arxiv.org/abs/2403.17881">
+     <a href="https://arxiv.org/abs/2402.07518">
 <img width="765" alt="image" src="assets/title.png">
      </a>
    <p align="center">
@@ -42,7 +42,7 @@ If you discover any defect or have any suggestions for this work, please feel fr
 
 ### Overview for ACW
 
-<img src="assets/Overview.png" width.="1000px">
+<img src="assets/Overview.png">
 
 ###  Contribution
 
@@ -73,7 +73,7 @@ and proves to be universally applicable across different LLMs.
 - [Comparison of Intact and Corrupted Watermarked Code](#comparison-of-intact-and-corrupted-watermarked-code)
 - [Evaluation Results of Multi-bit Watermarking](#evaluation-results-of-multi-bit-watermarking)
 - [Transformation Rules of ACW](#transformation-rules-of-acw)
-- [Cite The Survey](#Cite-The-Survey)
+- [Cite The Work](#Cite-The-Work)
 - [Contact](#contact)
 
 
@@ -81,9 +81,21 @@ and proves to be universally applicable across different LLMs.
 
 ## Evaluation Results of Multi-bit Watermarking
 
-## Transformation Rules of ACW
+<figure>
+    <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
+    <center>
+    <figcaption>Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
+    </center>
+</figure>
 
-## Cite The Survey
+
+## Transformation Rules for ACW
+The table below shows the complete set of transformation rules for ACW, 
+and provides the detailed rule description, an applicable code snippet, 
+and the transformed code snippet for each rule.
+<img src="assets/rules.png">
+
+## Cite The Work
 If you find our repository useful for your research project, please consider citing our paper:
 
 ```bibtex
