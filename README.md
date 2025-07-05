@@ -70,7 +70,7 @@ and proves to be universally applicable across different LLMs.
   - [Overview for ACW](#overview-for-acw)
   - [Contribution](#contribution)
 - [Summary of Contents](#summary-of-contents)
-- [Comparison of Intact and Corrupted Watermarked Code](#Comparison of Intact and Corrupted Watermarked Code)
+- [Comparison of Intact and Corrupted Watermarked Code](#comparison-of-intact-and-corrupted-watermarked-code)
 - [Evaluation Results of Multi-bit Watermarking](#evaluation-results-of-multi-bit-watermarking)
 - [Transformation Rules of ACW](#transformation-rules-of-acw)
 - [Cite The Survey](#Cite-The-Survey)
