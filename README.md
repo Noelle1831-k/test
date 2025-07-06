@@ -3,31 +3,22 @@
 <img width="765" alt="image" src="assets/title.png">
      </a>
    <p align="center">
-    <a href="https://scholar.google.com.hk/citations?user=1yhGS5sAAAAJ&hl=zh-CN"><strong>Boquan Li<sup>1</sup></strong></a>
+    <a><strong>Boquan Li<sup>1</sup></strong></a>
     .
-    <a href="https://zhangzjn.github.io/"><strong>Zirui Fu<sup>2</sup></strong></a>
+    <a><strong>Zirui Fu<sup>2</sup></strong></a>
     .
-    <a href="https://scholar.google.com.hk/citations?user=8-Vo9cUAAAAJ&hl=zh-CN"><strong>Menghan Hu<sup>1</sup></strong></a>
+    <a><strong>Mengdi Zhang<sup>3</sup></strong></a>
     .
-    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=4daxK2AAAAAJ"><strong>Zhenyu Zhang<sup>3</sup></strong></a>
+    <a><strong>Zhenyu Zhang<sup>3</sup></strong></a>
     .
-    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=fqte5H4AAAAJ"><strong>Chengjie Wang<sup>2</sup></strong></a>
+    <a><strong>Peixin Zhang<sup>4</sup></strong></a>
     .
-    <a href="https://github.com/flyingby/Awesome-Deepfake-Generation-and-Detection"><strong>Yunsheng Wu<sup>2</sup></strong></a>.
-    <p align="center">
-    <a href="https://scholar.google.com.hk/citations?user=E6zbSYgAAAAJ&hl=zh-CN"><strong>Guangtao Zhai<sup>4</sup></strong></a>
+    <a><strong>Xingmei Wang<sup>4</sup></strong></a>
     .
-    <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=6CIDtZQAAAAJ"><strong>Jian Yang<sup>3</sup></strong></a>
-    .
-    <a href="https://scholar.google.com.hk/citations?user=Ljk2BvIAAAAJ&hl=zh-CN&oi=ao"><strong>Chunhua Shen<sup>5</sup></strong></a> 
-    .
-    <a href="https://scholar.google.com.hk/citations?user=RwlJNLcAAAAJ&hl=zh-CN&oi=ao"><strong>Dacheng Tao<sup>6</sup></strong></a>
-</p>
-<p align="center">
-    <strong><sup>1</sup>East China Normal University</strong> &nbsp;&nbsp;&nbsp; <strong><sup>2</sup>Tencent Youtu Lab</strong> &nbsp;&nbsp;&nbsp; <strong><sup>3</sup>Nanjing University</strong> &nbsp;&nbsp;&nbsp; <strong><sup>4</sup>Shanghai Jiao Tong University</strong>
-    <br>
-    <strong><sup>5</sup>Zhejiang University</strong>  &nbsp;&nbsp;&nbsp; <strong><sup>6</sup>Nanyang Technological University</strong>
+    <a><strong>Jun Sun<sup>5</sup></strong></a>
     
+<p align="center">
+    <strong><sup>1</sup>Harbin Engineering University</strong> &nbsp;
 <p align="center">
     <a href='https://arxiv.org/abs/2402.07518'>
       <img src='https://img.shields.io/badge/arXiv-PDF-green?style=flat&logo=arXiv&logoColor=green' alt='arXiv PDF'>
@@ -70,27 +61,52 @@ and proves to be universally applicable across different LLMs.
   - [Overview for ACW](#overview-for-acw)
   - [Contribution](#contribution)
 - [Summary of Contents](#summary-of-contents)
+- [Quick Start](#quick-start)
 - [Comparison of Intact and Corrupted Watermarked Code](#comparison-of-intact-and-corrupted-watermarked-code)
 - [Evaluation Results of Multi-bit Watermarking](#evaluation-results-of-multi-bit-watermarking)
 - [Transformation Rules of ACW](#transformation-rules-of-acw)
 - [Cite The Work](#Cite-The-Work)
 - [Contact](#contact)
 
+## Quick Start
+### Step 1: Install Dependencies
 
+Install the required Python libraries by running:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 2: Prepare the Sourcery API
+Login Sourcery API by running:
+```bash
+sourcery login --token $SOURCERY_TOKEN
+```
+Please apply for a token on the [official Sourcery website](https://docs.sourcery.ai/Coding-Assistant/Guides/Getting-Started/CI/).
 ## Comparison of Intact and Corrupted Watermarked Code
 
 ## Evaluation Results of Multi-bit Watermarking
 <div align="center">
-     <figure>
-         <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
-         <figcaption>                   Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
-     </figure>
-</div>     
+    <figure>
+        <img src="assets/result.png" alt="Evaluation Results of Multi-bit Watermarking">
+        <figcaption>Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
+    </figure>
+</div>>
+Table 1 presents our evaluation results. In this experiment,
+we collect the watermarked code with four applicable transformations, i.e., each code snippet is embedded with 4-bit
+watermarks, where the first two bits are original watermarks and the next two bits are generated based on BCH. We
+present the BitACC results before and after error corrections, where the former uncorrected ones are intermediate
+results for comparisons.
 
+As shown by the result in Table 1, ACW achieves promising performance on watermark extraction, and furthermore,
+the results are significantly increased based on error correction. For example, on the APPS-GPT-4 dataset, the
+uncorrected BitACC is 81.92% while it increases to 100% based on our error-correction strategy. Especially, as the bold
+values in the table, all the BitACC results are over 98% after correction, indicating the outstanding ability of ACW in
+extracting the embedded watermarks.
 
 ## Transformation Rules for ACW
 The table below shows the complete set of transformation rules for ACW, 
-and provides the detailed rule description, an applicable code snippet, 
+and provides the detailed rule desription, an applicable code snippet, 
 and the transformed code snippet for each rule.
 <img src="assets/rules.png">
 
@@ -109,4 +125,5 @@ If you find our repository useful for your research project, please consider cit
 }
 ```
 ## Contact
-
+If you have any questions, or would like to get in touch, please feel free to reach out to us via email at
+```noelle@hrbeu.edu.cn```
