@@ -64,6 +64,7 @@ and the transformed code snippet for each rule.
         <figcaption>Table 1. Evaluation Results of Multi-bit Watermark Extraction</figcaption>
     </figure>
 </div>>
+
 Table 1 presents our evaluation results. In this experiment,
 we collect the watermarked code with four applicable transformations, i.e., each code snippet is embedded with 4-bit
 watermarks, where the first two bits are original watermarks and the next two bits are generated based on BCH. We
@@ -77,6 +78,38 @@ values in the table, all the BitACC results are over 98% after correction, indic
 extracting the embedded watermarks.
 
 ### Watermarked Code Examples
+
+```python
+# Unwatermarked Code
+def remove_Occc(s,ch):
+  first_occ = s.find(ch)
+  last_occ = s.rfind(ch)
+  if first_occ != -1 and last_occ != - 1:
+    s = s[:first_occ] + s[first_occ+1:last_occ] +s[last_occ+1:]
+  return s
+
+# Watermarked Code by STONE
+def remove_Occ/s, ch):
+    first = s.find(ch)
+    last = s.rfind(ch)
+    if first != -1 and first != last:
+        return s[:first] + s[first+1:last] + s[last+1:]
+    elif first != - 1:
+        return 5[:first] + 5[first + 1:]
+   else:
+       return 5
+
+# Watermarked Code by SWEET
+def remove_Occ=s,ch):
+    first_occ = s.find(ch)
+    if first_occ != -1:
+        s = s[:first_occ] + s[first_occ+1:]
+    last_occ = s.rfind(ch)
+    if last_occ > first_occ:
+        s=s[:last_occ-1]+s[last_occ:]
+    return s
+```
+
 
 ## Quick Start
 
@@ -116,7 +149,7 @@ Run the following command to get the complete results for the main RQ1 experimen
 python RQ1-get-results.py
 ```
 
-The results will be saved as output.json, containing the number of positive and negative examples in each dataset for computation.
+The results will be saved as _output.json_, containing the number of positive and negative examples in each dataset for computation.
 
 ##### Ablation experiment
 First, combine the generated code (or human-written code) from all datasets into a single folder.
@@ -144,7 +177,8 @@ python one-click-get-results_length.py
 
 ##### Pass Rate test on the APPS dataset
 
-After setting up and downloading the APPS dataset as instructed on the [APPS project page](https://github.com/hendrycks/apps), use the following command to perform a pass rate test on the APPS code data:
+After setting up and downloading the APPS dataset as instructed on the [APPS project page](https://github.com/hendrycks/apps), 
+use the following command to perform a pass rate test on the APPS code data:
 
 ```bash
 python test_one_solution.py -r <code_dir> -t <test_dir> --save /path/to/save_dir --print_results
@@ -158,7 +192,8 @@ First, you need to consolidate the code data into a JSONL file:
 python folder_to_jsonl.py convert_py_folder_to_jsonl --input_folder=<code_folder>
 ```
 
-After setting up as instructed on the [mxeval project page](https://github.com/amazon-science/mxeval), use the following commands to perform the pass rate test on MBPP and HumanEval code data:
+After setting up as instructed on the [mxeval project page](https://github.com/amazon-science/mxeval), 
+use the following commands to perform the pass rate test on MBPP and HumanEval code data:
 
 ```bash
 evaluate_functional_correctness <mbpp_data>.jsonl --problem_file data/mbxp/mbpp_release_v1.jsonl
@@ -169,7 +204,7 @@ evaluate_functional_correctness <humaneval_data>.jsonl --problem_file data/multi
 Run the following Python program, where strength 1 and 2 correspond to the Basic and Extreme settings, to get the experimental results:
 
 ```bash
-python one-click-get-results_ruff_attack.py folder_process --strength=<1/2>
+python one-click-get-results_ruff_attack.py folder_process --strength= <1 or 2>
 ```
 
 ## Contact
