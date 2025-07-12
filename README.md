@@ -88,6 +88,19 @@ def remove_Occc(s,ch):
     s = s[:first_occ] + s[first_occ+1:last_occ] +s[last_occ+1:]
   return s
 
+# Watermarked Code by ACW
+def remove_Occ(s, ch):
+	first_occ = s.find(ch)
+	if first_occ == -1:
+		return s
+	last_occ = s.rfind(ch)
+	if last_occ == -1:
+		return s
+	s = s[:first_occ] + s[first_occ + 1:]
+	if last_occ < len(s):
+		s = s[:last_occ] + s[last_occ + 1:]
+	return s
+
 # Watermarked Code by STONE
 def remove_Occ/s, ch):
     first = s.find(ch)
@@ -107,6 +120,15 @@ def remove_Occ=s,ch):
     last_occ = s.rfind(ch)
     if last_occ > first_occ:
         s=s[:last_occ-1]+s[last_occ:]
+    return s
+
+# Watermarked Code by WLLM
+def remove_O cc(s, ch):   
+    s = s.replace(ch, '', 1)    
+    s = ''.join([s[i:i + 1] if s[i:i +1] !=ch else ''  if s[i-1:i-1 + 1]==ch else s[i:i +
+    1]
+    if s[i + 1:i + 2]==ch else '' if s[i:]==ch else  s[i:i  + 1]
+   if s[i:-1]==ch  else s[i:]])
     return s
 ```
 
