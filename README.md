@@ -129,8 +129,8 @@ Transformation Rules.
 
 ### Evaluation of Multi-bit Watermarking
 
-<table style="font-size: 12px; text-align: center;">
- <caption style="font-size: 14px; text-align: center;"><b>Multi-bit Watermark Extraction Results.</b></caption>
+<table style="font-size: 10px; text-align: center;">
+ <caption style="font-size: 10px; text-align: center;"><b>Multi-bit Watermark Extraction Results.</b></caption>
  <thead>
    <tr>
      <th rowspan="2" style="text-align: center;">Dataset</th>
