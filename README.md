@@ -92,7 +92,7 @@ The results will be saved as _output.json_, containing the number of positive an
 
 #### **Evaluation on Utility**
 
-##### Pass Rate on APPS
+##### Pass Rate based on APPS
 
 After setting up and downloading the APPS dataset as instructed on the [APPS project page](https://github.com/hendrycks/apps), 
 testing the pass rate using the command:
