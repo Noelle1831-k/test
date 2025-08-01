@@ -129,52 +129,53 @@ Transformation Rules.
 
 ### Evaluation of Multi-bit Watermarking
 
-<table>
- <caption><b>Multi-bit Watermark Extraction Results.</b></caption>
+<table style="font-size: 12px; text-align: center;">
+ <caption style="font-size: 14px; text-align: center;"><b>Multi-bit Watermark Extraction Results.</b></caption>
  <thead>
    <tr>
-     <th rowspan="2">Dataset</th>
-     <th colspan="2">BitACC (%)-0000</th>
-     <th colspan="2">BitACC (%)-0101</th>
-     <th colspan="2">BitACC (%)-1010</th>
-     <th colspan="2">BitACC (%)-1111</th>
+     <th rowspan="2" style="text-align: center;">Dataset</th>
+     <th colspan="2" style="text-align: center;">BitACC (%)-0000</th>
+     <th colspan="2" style="text-align: center;">BitACC (%)-0101</th>
+     <th colspan="2" style="text-align: center;">BitACC (%)-1010</th>
+     <th colspan="2" style="text-align: center;">BitACC (%)-1111</th>
    </tr>
    <tr>
-     <th>Uncorrected</th>
-     <th>Corrected</th>
-     <th>Uncorrected</th>
-     <th>Corrected</th>
-     <th>Uncorrected</th>
-     <th>Corrected</th>
-     <th>Uncorrected</th>
-     <th>Corrected</th>
+     <th style="text-align: center;">Uncorrected</th>
+     <th style="text-align: center;">Corrected</th>
+     <th style="text-align: center;">Uncorrected</th>
+     <th style="text-align: center;">Corrected</th>
+     <th style="text-align: center;">Uncorrected</th>
+     <th style="text-align: center;">Corrected</th>
+     <th style="text-align: center;">Uncorrected</th>
+     <th style="text-align: center;">Corrected</th>
    </tr>
  </thead>
  <tbody>
    <tr>
-     <td>MBPP-GPT-4</td>
-     <td>78.14</td>
-     <td><b>100</b></td>
-     <td>92.69</td>
-     <td><b>99.48</b></td>
-     <td>86.89</td>
-     <td><b>100</b></td>
-     <td>98.91</td>
-     <td><b>98.91</b></td>
+     <td style="text-align: center;">MBPP-GPT-4</td>
+     <td style="text-align: center;">78.14</td>
+     <td style="text-align: center;"><b>100</b></td>
+     <td style="text-align: center;">92.69</td>
+     <td style="text-align: center;"><b>99.48</b></td>
+     <td style="text-align: center;">86.89</td>
+     <td style="text-align: center;"><b>100</b></td>
+     <td style="text-align: center;">98.91</td>
+     <td style="text-align: center;"><b>98.91</b></td>
    </tr>
    <tr>
-     <td>APPS-GPT-4</td>
-     <td>85.98</td>
-     <td><b>99.63</b></td>
-     <td>93.03</td>
-     <td><b>99.35</b></td>
-     <td>81.92</td>
-     <td><b>99.63</b></td>
-     <td>100</td>
-     <td><b>100</b></td>
+     <td style="text-align: center;">APPS-GPT-4</td>
+     <td style="text-align: center;">85.98</td>
+     <td style="text-align: center;"><b>99.63</b></td>
+     <td style="text-align: center;">93.03</td>
+     <td style="text-align: center;"><b>99.35</b></td>
+     <td style="text-align: center;">81.92</td>
+     <td style="text-align: center;"><b>99.63</b></td>
+     <td style="text-align: center;">100</td>
+     <td style="text-align: center;"><b>100</b></td>
    </tr>
  </tbody>
 </table>
+
 
 
 
