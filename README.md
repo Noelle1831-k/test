@@ -135,53 +135,19 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 
 <img src="assets/rules.png">
 
-### Evaluation of Multi-bit Watermarking
+### Multi-bit Watermarking
 
-<table style="font-size: 10px; text-align: center;">
- <thead>
-   <tr>
-     <th rowspan="2" style="font-size: 7px; text-align: center;">Dataset</th>
-     <th colspan="2" style="font-size: 7px; text-align: center;">BitACC (%)-0000</th>
-     <th colspan="2" style="font-size: 7px; text-align: center;">BitACC (%)-0101</th>
-     <th colspan="2" style="font-size: 7px; text-align: center;">BitACC (%)-1010</th>
-     <th colspan="2" style="font-size: 7px; text-align: center;">BitACC (%)-1111</th>
-   </tr>
-   <tr>
-     <th style="font-size: 7px; text-align: center;">Uncorrected</th>
-     <th style="font-size: 7px; text-align: center;">Corrected</th>
-     <th style="font-size: 7px; text-align: center;">Uncorrected</th>
-     <th style="font-size: 7px; text-align: center;">Corrected</th>
-     <th style="font-size: 7px; text-align: center;">Uncorrected</th>
-     <th style="font-size: 7px; text-align: center;">Corrected</th>
-     <th style="font-size: 7px; text-align: center;">Uncorrected</th>
-     <th style="font-size: 7px; text-align: center;">Corrected</th>
-   </tr>
- </thead>
- <tbody>
-   <tr>
-     <th style="font-size: 7px; text-align: center;">MBPP-GPT-4</th>
-     <th style="font-size: 7px; text-align: center;">78.14</th>
-     <th style="font-size: 7px; text-align: center;"><b>100</b></th>
-     <th style="font-size: 7px; text-align: center;">92.69</th>
-     <th style="font-size: 7px; text-align: center;"><b>99.48</b></th>
-     <th style="font-size: 7px; text-align: center;">86.89</th>
-     <th style="font-size: 7px; text-align: center;"><b>100</b></th>
-     <th style="font-size: 7px; text-align: center;">98.91</th>
-     <th style="font-size: 7px; text-align: center;"><b>98.91</b></th>
-   </tr>
-   <tr>
-     <th style="font-size: 7px; text-align: center;">APPS-GPT-4</th>
-     <th style="font-size: 7px; text-align: center;">85.98</th>
-     <th style="font-size: 7px; text-align: center;"><b>99.63</b></th>
-     <th style="font-size: 7px; text-align: center;">93.03</th>
-     <th style="font-size: 7px; text-align: center;"><b>99.35</b></th>
-     <th style="font-size: 7px; text-align: center;">81.92</th>
-     <th style="font-size: 7px; text-align: center;"><b>99.63</b></th>
-     <th style="font-size: 7px; text-align: center;">100</th>
-     <th style="font-size: 7px; text-align: center;"><b>100</b></th>
-   </tr>
- </tbody>
-</table>
+We explore the transferability of **ACW** applied for tracing LLMs, beyond our main task of AI-generated code detection.
+By assigning multi-bit watermarks to encode different LLMs (e.g., ChatGPT-4 may be assigned with encoding $1011$), the authorship of a given code can be traced by identifying the extracted bit sequences.
+Preliminary, we encode multi-bit watermarks based on the Bose-Chaudhuri-Hocquenghem (BCH) code, which is a typical error-correction code in digital communication systems.
+Let `$\omega$` be a `$k$`-bit binary sequence, a BCH code over Galois field `$GF(q)$` with parameter `$(l, k, e)$` denoted as `$BCH(l, k, e)_q$`, which encodes `$\omega$` into an `$l$`-bit sequence `$\omega_{en}$`.
+The encoding is governed by a generator polynomial `$g(x)$` which is the minimal polynomial over `$GF(q)$`, ensuring the original message `$\omega$` can be recovered by decoding the encoded message `$\omega_{en}$` if up to `$e$` bits are corrupted.
+For example, `$BCH(7, 4, 1)_2$` uses a generator polynomial as `$g(x) = x^3 + x + 1$`, corresponding to the binary coefficients `$1011$`.
+
+<figure>
+<img src="assets/result.png">
+</figure>
+
 
 <div align="center">
 
