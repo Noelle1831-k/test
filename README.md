@@ -26,9 +26,7 @@
   
 
 # ACW : AI-Generated Code Watermarking  <a id="acw"></a>
-
-
-Large language models (LLMs) have significantly enhanced the usability of AI-generated code, providing effective assistance to programmers. 
+Large language models (LLMs) have significantly enhanced the usability of AI-generated code, providing effective assistance to programmers.
 This advancement also raises ethical and legal concerns, such as academic dishonesty or the generation of malicious code.
 For accountability, it is imperative to detect whether a piece of code is AI-generated.
 Watermarking is broadly considered a promising solution and has been successfully applied to identify LLM-generated text. 
@@ -107,9 +105,11 @@ evaluate_functional_correctness <humaneval_data>.jsonl --problem_file data/multi
 #### Evaluation results on resilience
 
 Running the following command for testing:
+
 ```bash
 python one-click-get-results_ruff_attack.py folder_process --strength= <1 or 2>
 ```
+
 Strength 1 and 2 correspond to the Default-level and Maximum-level modifications.
 
 ## Overview of this repository
