@@ -24,8 +24,15 @@
       <img src='https://img.shields.io/badge/arXiv-PDF-green?style=flat&logo=arXiv&logoColor=green' alt='arXiv PDF'>
          </a>
   
+## Overview of this repository
+- [Abstract](#abstract)
+- [Quick Start](#quick-start)
+- [Appendix](#appendix)
+    - [Transformation Rules](#transformation-rules)
+    - [Multi-bit Watermarking](#multi-bit-watermarking)
+- [Contact](#contact)
 
-## Overview  <a id="acw"></a>
+## Abstract
 
 <img src="assets/Overview.png">
 
@@ -119,15 +126,6 @@ python RQ4-get-results.py folder_process --strength= <1 or 2>
 ```
 
 Strength 1 and 2 correspond to the Default-level and Maximum-level modifications.
-
-## Overview of this repository
-
-- [Overview](#overview-a-idacwa)
-- [Quick Start](#quick-start)
-- [Appendix](#appendix)
-    - [Transformation Rules](#transformation-rules)
-    - [Multi-bit Watermarking](#multi-bit-watermarking)
-- [Contact](#contact)
 
 ## Appendix
 
