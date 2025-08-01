@@ -25,7 +25,10 @@
          </a>
   
 
-# ACW : AI-Generated Code Watermarking  <a id="acw"></a>
+## Overview  <a id="acw"></a>
+
+<img src="assets/Overview.png">
+
 Large language models (LLMs) have significantly enhanced the usability of 
 AI-generated code, providing effective assistance to programmers.
 This advancement also raises ethical and legal concerns, 
@@ -45,10 +48,6 @@ preserves code utility, and is resilient against code optimizations.
 Especially, **ACW** is efficient and is universal across different LLMs, 
 addressing the limitations of existing approaches.
 
-<img src="assets/Overview.png">
-
-</p>
-
 ## Quick Start
 
 ### Step 1: Install Dependencies
@@ -67,8 +66,8 @@ sourcery login --token $SOURCERY_TOKEN
 
 ### Step 2: Prepare the Dataset
 
-We have provided our complete experimental data containing AI-generated and human-written code.
-If additional data is necessary, please add its relative path of the dataset to the  **folder_list.py** file, like this:
+We have provided our complete experimental data containing AI-generated and human-written code. 
+If additional data is necessary, please add the dataset path to the **folder_list.py** file, like this:
 
 ```python
 folder_paths = ["G/Data"]
@@ -76,7 +75,7 @@ folder_paths = ["G/Data"]
 
 ### Step 3: Get the Results
 
-#### Evaluation results on discriminability
+#### **Evaluation on Discriminability**
 
 ```bash
 python RQ1-get-results.py
@@ -84,18 +83,18 @@ python RQ1-get-results.py
 
 The results will be saved as _output.json_, containing the number of positive and negative examples for computation.
 
-#### Evaluation results on utility
+#### **Evaluation on Utility**
 
 ##### Pass Rate on APPS
 
 After setting up and downloading the APPS dataset as instructed on the [APPS project page](https://github.com/hendrycks/apps), 
-use the following command to perform a pass rate test on the APPS code data:
+testing the pass rate using the command:
 
 ```bash
 python test_one_solution.py -r <code_dir> -t <test_dir> --save /path/to/save_dir --print_results
 ```
 
-##### Pass Rate based on MBPP and HumanEval:
+##### Pass Rate based on MBPP and HumanEval
 
 First, please consolidate the code data into a JSONL file:
 
@@ -123,10 +122,11 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 
 ## Overview of this repository
 
+- [Overview](#overview-a-idacwa)
 - [Quick Start](#quick-start)
 - [Appendix](#appendix)
-    - [Transformation Rules](#transformation-rules-of-acw)
-    - [Evaluation of Multi-bit Watermarking](#evaluation-results-of-multi-bit-watermarking)
+    - [Transformation Rules](#transformation-rules)
+    - [Multi-bit Watermarking](#multi-bit-watermarking)
 - [Contact](#contact)
 
 ## Appendix
@@ -140,7 +140,7 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 We explore the transferability of **ACW** applied for tracing LLMs, beyond our main task of AI-generated code detection.
 By assigning multi-bit watermarks to encode different LLMs (e.g., ChatGPT-4 may be assigned with encoding $1011$), the authorship of a given code can be traced by identifying the extracted bit sequences.
 Preliminary, we encode multi-bit watermarks based on the Bose-Chaudhuri-Hocquenghem (BCH) code, which is a typical error-correction code in digital communication systems.
-Let $\omega$ be a $k$-bit binary sequence, a BCH code over Galois field $GF(q)$ with parameter $(l, k, e)$ denoted as $BCH(l, k, e)\_{q}$, which encodes $\omega$ into an $l$-bit sequence $\omega_{en}$.
+Let $\omega$ be a $k$-bit binary sequence, a BCH code over Galois field $GF(q)$ with parameter $(l, k, e)$ denoted as $BCH(l, k, e)_{q}$, which encodes $\omega$ into an $l$-bit sequence $\omega_{en}$.
 The encoding is governed by a generator polynomial $g(x)$ which is the minimal polynomial over $GF(q)$, ensuring the original message $\omega$ can be recovered by decoding the encoded message $\omega_{en}$ if up to $e$ bits are corrupted.
 For example, $BCH(7, 4, 1)_2$ uses a generator polynomial as $g(x) = x^3 + x + 1$, corresponding to the binary coefficients $1011$.
 
