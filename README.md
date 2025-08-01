@@ -140,45 +140,45 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 <table style="font-size: 10px; text-align: center;">
  <thead>
    <tr>
-     <th rowspan="2" style="text-align: center;">Dataset</th>
-     <th colspan="2" style="text-align: center;">BitACC (%)-0000</th>
-     <th colspan="2" style="text-align: center;">BitACC (%)-0101</th>
-     <th colspan="2" style="text-align: center;">BitACC (%)-1010</th>
-     <th colspan="2" style="text-align: center;">BitACC (%)-1111</th>
+     <th rowspan="2" style="font-size: 10px; text-align: center;">Dataset</th>
+     <th colspan="2" style="font-size: 10px; text-align: center;">BitACC (%)-0000</th>
+     <th colspan="2" style="font-size: 10px; text-align: center;">BitACC (%)-0101</th>
+     <th colspan="2" style="font-size: 10px; text-align: center;">BitACC (%)-1010</th>
+     <th colspan="2" style="font-size: 10px; text-align: center;">BitACC (%)-1111</th>
    </tr>
    <tr>
-     <th style="text-align: center;">Uncorrected</th>
-     <th style="text-align: center;">Corrected</th>
-     <th style="text-align: center;">Uncorrected</th>
-     <th style="text-align: center;">Corrected</th>
-     <th style="text-align: center;">Uncorrected</th>
-     <th style="text-align: center;">Corrected</th>
-     <th style="text-align: center;">Uncorrected</th>
-     <th style="text-align: center;">Corrected</th>
+     <th style="font-size: 10px; text-align: center;">Uncorrected</th>
+     <th style="font-size: 10px; text-align: center;">Corrected</th>
+     <th style="font-size: 10px; text-align: center;">Uncorrected</th>
+     <th style="font-size: 10px; text-align: center;">Corrected</th>
+     <th style="font-size: 10px; text-align: center;">Uncorrected</th>
+     <th style="font-size: 10px; text-align: center;">Corrected</th>
+     <th style="font-size: 10px; text-align: center;">Uncorrected</th>
+     <th style="font-size: 10px; text-align: center;">Corrected</th>
    </tr>
  </thead>
  <tbody>
    <tr>
-     <th style="text-align: center;">MBPP-GPT-4</th>
-     <th style="text-align: center;">78.14</th>
-     <th style="text-align: center;"><b>100</b></th>
-     <th style="text-align: center;">92.69</th>
-     <th style="text-align: center;"><b>99.48</b></th>
-     <th style="text-align: center;">86.89</th>
-     <th style="text-align: center;"><b>100</b></th>
-     <th style="text-align: center;">98.91</th>
-     <th style="text-align: center;"><b>98.91</b></th>
+     <th style="font-size: 10px; text-align: center;">MBPP-GPT-4</th>
+     <th style="font-size: 10px; text-align: center;">78.14</th>
+     <th style="font-size: 10px; text-align: center;"><b>100</b></th>
+     <th style="font-size: 10px; text-align: center;">92.69</th>
+     <th style="font-size: 10px; text-align: center;"><b>99.48</b></th>
+     <th style="font-size: 10px; text-align: center;">86.89</th>
+     <th style="font-size: 10px; text-align: center;"><b>100</b></th>
+     <th style="font-size: 10px; text-align: center;">98.91</th>
+     <th style="font-size: 10px; text-align: center;"><b>98.91</b></th>
    </tr>
    <tr>
-     <th style="text-align: center;">APPS-GPT-4</th>
-     <th style="text-align: center;">85.98</th>
-     <th style="text-align: center;"><b>99.63</b></th>
-     <th style="text-align: center;">93.03</th>
-     <th style="text-align: center;"><b>99.35</b></th>
-     <th style="text-align: center;">81.92</th>
-     <th style="text-align: center;"><b>99.63</b></th>
-     <th style="text-align: center;">100</th>
-     <th style="text-align: center;"><b>100</b></th>
+     <th style="font-size: 10px; text-align: center;">APPS-GPT-4</th>
+     <th style="font-size: 10px; text-align: center;">85.98</th>
+     <th style="font-size: 10px; text-align: center;"><b>99.63</b></th>
+     <th style="font-size: 10px; text-align: center;">93.03</th>
+     <th style="font-size: 10px; text-align: center;"><b>99.35</b></th>
+     <th style="font-size: 10px; text-align: center;">81.92</th>
+     <th style="font-size: 10px; text-align: center;"><b>99.63</b></th>
+     <th style="font-size: 10px; text-align: center;">100</th>
+     <th style="font-size: 10px; text-align: center;"><b>100</b></th>
    </tr>
  </tbody>
 </table>
