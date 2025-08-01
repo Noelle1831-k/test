@@ -140,14 +140,24 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 We explore the transferability of **ACW** applied for tracing LLMs, beyond our main task of AI-generated code detection.
 By assigning multi-bit watermarks to encode different LLMs (e.g., ChatGPT-4 may be assigned with encoding $1011$), the authorship of a given code can be traced by identifying the extracted bit sequences.
 Preliminary, we encode multi-bit watermarks based on the Bose-Chaudhuri-Hocquenghem (BCH) code, which is a typical error-correction code in digital communication systems.
-Let `$\omega$` be a `$k$`-bit binary sequence, a BCH code over Galois field `$GF(q)$` with parameter `$(l, k, e)$` denoted as `$BCH(l, k, e)_q$`, which encodes `$\omega$` into an `$l$`-bit sequence `$\omega_{en}$`.
-The encoding is governed by a generator polynomial `$g(x)$` which is the minimal polynomial over `$GF(q)$`, ensuring the original message `$\omega$` can be recovered by decoding the encoded message `$\omega_{en}$` if up to `$e$` bits are corrupted.
-For example, `$BCH(7, 4, 1)_2$` uses a generator polynomial as `$g(x) = x^3 + x + 1$`, corresponding to the binary coefficients `$1011$`.
+Let $\omega$ be a $k$-bit binary sequence, a BCH code over Galois field $GF(q)$ with parameter $(l, k, e)$ denoted as $BCH(l, k, e)_q$, which encodes $\omega$ into an $l$-bit sequence $\omega_{en}$.
+The encoding is governed by a generator polynomial $g(x)$ which is the minimal polynomial over $GF(q)$, ensuring the original message $\omega$ can be recovered by decoding the encoded message $\omega_{en}$ if up to $e$ bits are corrupted.
+For example, $BCH(7, 4, 1)_2$ uses a generator polynomial as $g(x) = x^3 + x + 1$, corresponding to the binary coefficients $1011$.
 
-<figure>
+For watermark embedding, given an AI-generated code snippet $\mathcal{C}$ and an applicable transformation set $T$, \textbf{ACW} embeds an $l$-bit watermark to $\mathcal{C}$ by selectively applying $l$ applicable transformations from $T$, corresponding to their bit positions in $\omega$ (encoded based on BCH).
+If the bit value in a position is $0$, the corresponding transformation will be applied to the code. If the bit value is $0$, the transformation will be skipped.
+
+For watermark extraction, \textbf{ACW} checks the application status of $l$ applicable transformations.
+If a certain transformation has been applied, it is determined bit value $1$, otherwise, $0$.
+Finally, a multi-bit watermark $w_{ex}$ can be extracted as a bit sequence.
+Note that BCH allows us to correct possible wrongly-extracted watermark bits, where the error tolerance is determined by the parameter $e$ in BCH.
+
+We empirically evaluate the correctness of \textbf{ACW} in extracting multi-bit watermarks in terms of Bit Accuracy (BitACC).
+Given a set of watermarked codes, BitACC refers to the proportion of the codes whose encoded watermarks are correctly extracted, among the total.
+In particular, we consider the watermark in a certain code snippet to be correctly extracted, only if the extracted watermark matches the original watermark (in bit) exactly.
+
+
 <img src="assets/result.png">
-</figure>
-
 
 <div align="center">
 
