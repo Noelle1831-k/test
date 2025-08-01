@@ -115,7 +115,7 @@ evaluate_functional_correctness <humaneval_data>.jsonl --problem_file data/multi
 Running the following command for testing:
 
 ```bash
-python one-click-get-results_ruff_attack.py folder_process --strength= <1 or 2>
+python RQ4-get-results.py folder_process --strength= <1 or 2>
 ```
 
 Strength 1 and 2 correspond to the Default-level and Maximum-level modifications.
