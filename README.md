@@ -26,16 +26,25 @@
   
 
 # ACW : AI-Generated Code Watermarking  <a id="acw"></a>
-Large language models (LLMs) have significantly enhanced the usability of AI-generated code, providing effective assistance to programmers.
-This advancement also raises ethical and legal concerns, such as academic dishonesty or the generation of malicious code.
+Large language models (LLMs) have significantly enhanced the usability of 
+AI-generated code, providing effective assistance to programmers.
+This advancement also raises ethical and legal concerns, 
+such as academic dishonesty or the generation of malicious code.
 For accountability, it is imperative to detect whether a piece of code is AI-generated.
 Watermarking is broadly considered a promising solution and has been successfully applied to identify LLM-generated text. 
-However, existing efforts on code are far from ideal, suffering from limited universality and excessive time and memory consumption.
-In this work, we propose a plug-and-play watermarking approach for AI-generated code detection, named **ACW** (**A**I **C**ode **W**atermarking).
-**ACW** is training-free and works by selectively applying a set of carefully-designed, semantic-preserving and idempotent code transformations to LLM code outputs.
-The presence or absence of the transformations serves as implicit watermarks, enabling the detection of AI-generated code.
-Our experimental results show that ACW effectively detects AI-generated code, preserves code utility, and is resilient against code optimizations.
-Especially, **ACW** is efficient and is universal across different LLMs, addressing the limitations of existing approaches.
+However, existing efforts on code are far from ideal, 
+suffering from limited universality and excessive time and memory consumption.
+In this work, we propose a plug-and-play watermarking approach for AI-generated code detection, 
+named **ACW** (**A**I **C**ode **W**atermarking).
+**ACW** is training-free and works by selectively applying a set of carefully-designed, 
+semantic-preserving and idempotent code transformations to LLM code outputs.
+The presence or absence of the transformations serves as implicit watermarks, 
+enabling the detection of AI-generated code.
+Our experimental results show that ACW effectively detects AI-generated code, 
+preserves code utility, and is resilient against code optimizations.
+Especially, **ACW** is efficient and is universal across different LLMs, 
+addressing the limitations of existing approaches.
+
 <img src="assets/Overview.png">
 
 </p>
@@ -124,13 +133,11 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
 
 ### Transformation Rules
 
-Transformation Rules.
 <img src="assets/rules.png">
 
 ### Evaluation of Multi-bit Watermarking
 
 <table style="font-size: 10px; text-align: center;">
- <caption style="font-size: 10px; text-align: center;"><b>Multi-bit Watermark Extraction Results.</b></caption>
  <thead>
    <tr>
      <th rowspan="2" style="text-align: center;">Dataset</th>
@@ -176,14 +183,24 @@ Transformation Rules.
  </tbody>
 </table>
 
+<div align="center">
 
+Table 1: Multi-bit Watermark Extraction Results.
 
+</div>
 
 The above table presents our results.
-Following our error-correction strategies, in this experiment, we collect the watermarked codes with four applicable transformations in MBPP-GPT-4 and APPS-GPT-4 datasets, i.e., each code snippet is embedded with 4-bit watermarks, where the first two bits are original watermarks and the next two bits are generated based on BCH.
-We present the BitACC results before and after error corrections, where the former uncorrected ones are intermediate results for comparisons.
-As shown by the result, **ACW** achieves promising performance on watermark extraction, and the results are significantly increased based on error correction.
-Especially, as the bold values in the table, all the BitACC results are over 98\% after correction, indicating that **ACW** has the ability to embed and extract multi-bit watermarks, and has the potential to be applied to more tasks beyond AI-generated code detection. 
+Following our error-correction strategies, 
+in this experiment, we collect the watermarked codes with four applicable transformations in MBPP-GPT-4 and APPS-GPT-4 datasets, 
+i.e., each code snippet is embedded with 4-bit watermarks, 
+where the first two bits are original watermarks and the next two bits are generated based on BCH.
+We present the BitACC results before and after error corrections, 
+where the former uncorrected ones are intermediate results for comparisons.
+As shown by the result, **ACW** achieves promising performance on watermark extraction, 
+and the results are significantly increased based on error correction.
+Especially, as the bold values in the table, all the BitACC results are over 98\% after correction, 
+indicating that **ACW** has the ability to embed and extract multi-bit watermarks, 
+and has the potential to be applied to more tasks beyond AI-generated code detection. 
 
 ## Contact
 We are looking forward to any valuable questions or suggestions, please feel free to contact us at ```noelle@hrbeu.edu.cn```
