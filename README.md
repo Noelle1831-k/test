@@ -110,7 +110,7 @@ evaluate_functional_correctness <mbpp_data>.jsonl --problem_file data/mbxp/mbpp_
 evaluate_functional_correctness <humaneval_data>.jsonl --problem_file data/multilingual_humaneval/HumanEval.jsonl
 ```
 
-#### Evaluation results on resilience
+#### **Evaluation on resilience**
 
 Running the following command for testing:
 
