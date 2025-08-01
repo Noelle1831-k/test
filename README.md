@@ -159,26 +159,26 @@ Strength 1 and 2 correspond to the Default-level and Maximum-level modifications
  </thead>
  <tbody>
    <tr>
-     <td style="text-align: center;">MBPP-GPT-4</td>
-     <td style="text-align: center;">78.14</td>
-     <td style="text-align: center;"><b>100</b></td>
-     <td style="text-align: center;">92.69</td>
-     <td style="text-align: center;"><b>99.48</b></td>
-     <td style="text-align: center;">86.89</td>
-     <td style="text-align: center;"><b>100</b></td>
-     <td style="text-align: center;">98.91</td>
-     <td style="text-align: center;"><b>98.91</b></td>
+     <th style="text-align: center;">MBPP-GPT-4</th>
+     <th style="text-align: center;">78.14</th>
+     <th style="text-align: center;"><b>100</b></th>
+     <th style="text-align: center;">92.69</th>
+     <th style="text-align: center;"><b>99.48</b></th>
+     <th style="text-align: center;">86.89</th>
+     <th style="text-align: center;"><b>100</b></th>
+     <th style="text-align: center;">98.91</th>
+     <th style="text-align: center;"><b>98.91</b></th>
    </tr>
    <tr>
-     <td style="text-align: center;">APPS-GPT-4</td>
-     <td style="text-align: center;">85.98</td>
-     <td style="text-align: center;"><b>99.63</b></td>
-     <td style="text-align: center;">93.03</td>
-     <td style="text-align: center;"><b>99.35</b></td>
-     <td style="text-align: center;">81.92</td>
-     <td style="text-align: center;"><b>99.63</b></td>
-     <td style="text-align: center;">100</td>
-     <td style="text-align: center;"><b>100</b></td>
+     <th style="text-align: center;">APPS-GPT-4</th>
+     <th style="text-align: center;">85.98</th>
+     <th style="text-align: center;"><b>99.63</b></th>
+     <th style="text-align: center;">93.03</th>
+     <th style="text-align: center;"><b>99.35</b></th>
+     <th style="text-align: center;">81.92</th>
+     <th style="text-align: center;"><b>99.63</b></th>
+     <th style="text-align: center;">100</th>
+     <th style="text-align: center;"><b>100</b></th>
    </tr>
  </tbody>
 </table>
